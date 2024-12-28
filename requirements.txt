@@ -1,0 +1,16 @@
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn
+Flask
+tweepy 
+wordcloud
+fastapi
+uvicorn
+dvc
+evidently 
+mlflow
+nltk
+kaggle
+-e 
