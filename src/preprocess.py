@@ -23,6 +23,8 @@ def clean_text(text):
     text = [lemmatizer.lemmatize(word) for word in text if word not in STOPWORDS]
     return " ".join(text)
 #os.makedirs('data/processed',exist_ok=True)
+
+
 def preprocess_data(input_path, output_path):
     df = pd.read_csv(input_path, encoding='latin1', header=None)
     df.columns = ['target', 'id', 'date', 'query', 'user', 'text']
@@ -32,6 +34,6 @@ def preprocess_data(input_path, output_path):
     df.to_csv(output_path, index=False)
 
 if __name__ == "__main__":
-    preprocess_data("data/archive/noemoticon.csv", "data/processed/cleaned_data.csv")
+    preprocess_data("data/archive/noemoticon.csv "+"data/archive/testdata.csv", "data/processed/cleaned_data.csv")
 
     
