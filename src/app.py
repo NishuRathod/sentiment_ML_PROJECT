@@ -25,7 +25,7 @@ vectorizer = joblib.load(vectorizer_path)
 #app = Flask(__name__)
 app = Flask(__name__, template_folder='E:/sentiment_ML_PROJECT/templates')
 # Home route
-application=app
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -51,5 +51,5 @@ def predict():
     return jsonify({"input_text": input_text, "sentiment": sentiment})
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
